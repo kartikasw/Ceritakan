@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Perempuan</string>
+    <string name="title_story">Kisah</string>
+    <string name="title_motivation">Motivasi</string>
+    <string name="title_tips">Tips</string>
+    <string name="title_profile">Profile</string>
+
+    <string-array name="array_status">
+        <item>Rahasia</item>
+        <item>Publik</item>
+    </string-array>
+</resources>

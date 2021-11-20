@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_story">
+
+    <fragment
+        android:id="@+id/navigation_story"
+        android:name="com.example.perempuan.ui.story.StoryFragment"
+        android:label="@string/title_story"
+        tools:layout="@layout/fragment_story" />
+
+    <fragment
+        android:id="@+id/navigation_motivation"
+        android:name="com.example.perempuan.ui.motivation.MotivationFragment"
+        android:label="@string/title_motivation"
+        tools:layout="@layout/fragment_motivation" />
+
+    <fragment
+        android:id="@+id/navigation_tips"
+        android:name="com.example.perempuan.ui.tips.TipsFragment"
+        android:label="@string/title_tips"
+        tools:layout="@layout/fragment_tips" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.perempuan.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

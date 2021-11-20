@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment"
+    android:layout_marginBottom="60dp"
+    android:background="#7DB9FF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="49dp"
+                android:fontFamily="@font/montserrat"
+                android:text="PROFIL"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/background_yellow"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Username" />
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    style="@style/form_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/email"
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/form_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginBottom="40dp"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegis"
+                style="@style/button"
+                android:layout_width="282dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Edit Profil" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogout"
+                style="@style/button"
+                android:layout_width="282dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Log out" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recyclerprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@layout/item_story_user"
+                android:layout_marginTop="40dp"
+                tools:listitem="@layout/item_story_user"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

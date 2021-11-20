@@ -1,0 +1,12 @@
+package com.example.perempuan.activity.story
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.perempuan.R
+
+class StoryShowActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_story_show)
+    }
+}
