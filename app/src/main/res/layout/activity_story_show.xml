@@ -39,7 +39,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/status"
+                    android:id="@+id/username"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
 
 
                 <TextView
-                    android:id="@+id/tvStatus"
+                    android:id="@+id/tvUsername"
                     style="@style/form_yellow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                     android:layout_marginTop="23dp" />
 
                 <TextView
-                    android:id="@+id/desc"
+                    android:id="@+id/content"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,19 +78,19 @@
                     android:text="Deskripsi" />
 
                 <TextView
-                    android:id="@+id/tvDesc"
+                    android:id="@+id/tvContent"
                     style="@style/form_yellow"
                     android:layout_width="match_parent"
                     android:layout_height="163dp"
                     android:layout_marginTop="23dp" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnStory"
+                    android:id="@+id/btnBack"
                     style="@style/button"
                     android:layout_gravity="center"
                     android:layout_marginTop="42dp"
                     android:layout_marginBottom="49dp"
-                    android:text="Simpan" />
+                    android:text="Kembali" />
 
             </LinearLayout>
 
