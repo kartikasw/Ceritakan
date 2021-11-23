@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.story.StoryCreateActivity"
+    tools:context=".activity.ReadMoreActivity"
     android:background="#7DB9FF">
 
     <ScrollView
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="49dp"
                 android:fontFamily="@font/montserrat"
-                android:text="CERITAKAN"
+                android:text="DETAIL CERITA"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="40sp"
@@ -39,77 +39,37 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvStatus"
+                    android:id="@+id/tvUsername"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp"
-                    android:text="Status" />
-
-
-                <Spinner
-                    android:id="@+id/spStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:entries="@array/array_status"
-                    android:background="@drawable/spinner"/>
+                    android:text="Username" />
 
 
                 <TextView
-                    android:id="@+id/tvCategory"
-                    style="@style/text_normal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:text="Status" />
-
-
-                <Spinner
-                    android:id="@+id/spCategory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:entries="@array/array_category"
-                    android:background="@drawable/spinner"/>
-
-                <TextView
-                    android:id="@+id/judul"
+                    android:id="@+id/tvTitle"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp"
                     android:text="Judul" />
 
-                <EditText
-                    android:id="@+id/etTitle"
-                    style="@style/form_white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp" />
-
                 <TextView
-                    android:id="@+id/deskripsi"
+                    android:id="@+id/tvContent"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp"
                     android:text="Deskripsi" />
 
-                <EditText
-                    android:id="@+id/etDesc"
-                    style="@style/form_white"
-                    android:layout_width="match_parent"
-                    android:layout_height="163dp"
-                    android:layout_marginTop="23dp"/>
-
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnCreate"
+                    android:id="@+id/btnBack"
                     style="@style/button"
                     android:layout_gravity="center"
                     android:layout_marginTop="42dp"
                     android:layout_marginBottom="49dp"
-                    android:text="Kirim" />
+                    android:text="Kembali" />
 
             </LinearLayout>
 

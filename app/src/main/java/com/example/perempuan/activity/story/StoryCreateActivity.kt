@@ -28,11 +28,12 @@ class StoryCreateActivity : AppCompatActivity() {
         binding.apply {
             btnCreate.setOnClickListener{
                 val status = spStatus.selectedItem.toString()
+                val category = spCategory.selectedItem.toString()
                 val title = etTitle.text.toString()
                 val desc = etDesc.text.toString()
                 val user_uid = fAuth.currentUser?.uid
 
-                var story = user_uid?.let { it -> Story(it, status, title, desc,  0) }
+                var story = user_uid?.let { it -> Story(it, status, category, title, desc,  0) }
                 if (story != null) {
                     storyCreateViewModel.createStory(story)
                     if(storyCreateViewModel.getState()){

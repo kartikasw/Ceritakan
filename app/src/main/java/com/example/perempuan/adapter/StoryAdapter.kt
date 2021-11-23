@@ -8,13 +8,19 @@ import com.example.perempuan.R
 import com.example.perempuan.model.Story
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.item_story.view.*
 
 class StoryAdapter(options: FirestoreRecyclerOptions<Story>):
     FirestoreRecyclerAdapter<Story, StoryAdapter.MyViewHolder>(options) {
 
+    private val fStore = FirebaseFirestore.getInstance()
+    private val reference: CollectionReference = fStore.collection("users")
+    private lateinit var modelUsername: String
+
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        //var username = itemView.tvUsername
+        var username = itemView.tvUsername
         var title = itemView.tvTitle
         var content = itemView.tvContent
         var likes = itemView.likeCount
@@ -26,6 +32,16 @@ class StoryAdapter(options: FirestoreRecyclerOptions<Story>):
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Story) {
+        model.user_uid?.let {
+            reference.document(it).get().addOnSuccessListener {
+                modelUsername = it.getString("username").toString()
+                if(model.status == "Rahasia") {
+                    holder.username.text = "Anonymous"
+                } else {
+                    holder.username.text = modelUsername
+                }
+            }
+        }
         holder.title.text = model.title
         holder.content.text = model.content
         holder.likes.text = model.likeCount.toString()

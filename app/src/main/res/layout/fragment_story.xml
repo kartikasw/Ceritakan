@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.story.StoryFragment"
     android:layout_marginBottom="60dp"
+    android:paddingTop="30dp"
     android:background="#7DB9FF">
 
     <androidx.recyclerview.widget.RecyclerView

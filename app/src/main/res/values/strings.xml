@@ -9,4 +9,9 @@
         <item>Rahasia</item>
         <item>Publik</item>
     </string-array>
+
+    <string-array name="array_category">
+        <item>Kisah</item>
+        <item>Motivasi</item>
+    </string-array>
 </resources>

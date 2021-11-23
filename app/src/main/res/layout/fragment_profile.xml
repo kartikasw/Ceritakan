@@ -74,7 +74,7 @@
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnRegis"
+                android:id="@+id/btnEdit"
                 style="@style/button"
                 android:layout_width="282dp"
                 android:layout_gravity="center"

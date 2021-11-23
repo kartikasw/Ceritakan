@@ -44,6 +44,10 @@ class ProfileFragment : Fragment() {
             tvEmail.setText(it.getString("email"))
         }
 
+        btnEdit.setOnClickListener{
+
+        }
+
         btnLogout.setOnClickListener{
             val dialog = AlertDialog.Builder(requireContext())
             dialog.setTitle("Log out")
