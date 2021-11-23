@@ -1,18 +1,17 @@
-package com.example.perempuan.activity.story
+package com.example.perempuan.activity.post
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.perempuan.model.Story
+import com.example.perempuan.model.Post
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 
-class StoryCreateViewModel: ViewModel() {
-    private val db = FirebaseFirestore.getInstance()
+class PostCreateViewModel: ViewModel() {
+    private val fStore = FirebaseFirestore.getInstance()
     private var isSucceeded: Boolean = true
 
-    fun createStory(story: Story) = viewModelScope.launch{
-        db.collection("stories").add(story).addOnSuccessListener {
+    fun createPost(uid: String, post: Post) = viewModelScope.launch{
+        fStore.collection("posts").document(uid).set(post).addOnSuccessListener {
             //Log.d("check", "Berhasil")
             isSucceeded = true
         }.addOnFailureListener{

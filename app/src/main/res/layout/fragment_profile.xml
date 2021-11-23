@@ -90,12 +90,12 @@
                 android:text="Log out" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/Recyclerprofil"
+                android:id="@+id/rvPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@layout/item_story_user"
+                android:entries="@layout/item_post_user"
                 android:layout_marginTop="40dp"
-                tools:listitem="@layout/item_story_user"/>
+                tools:listitem="@layout/item_post_user"/>
 
         </LinearLayout>
     </ScrollView>

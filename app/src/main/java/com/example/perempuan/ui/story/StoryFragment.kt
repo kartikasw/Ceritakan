@@ -8,17 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.perempuan.activity.story.StoryCreateActivity
+import com.example.perempuan.activity.post.PostCreateActivity
 import com.example.perempuan.adapter.StoryAdapter
 import com.example.perempuan.databinding.FragmentStoryBinding
-import com.example.perempuan.model.Story
+import com.example.perempuan.model.Post
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import kotlinx.android.synthetic.main.fragment_profile.*
-import kotlinx.android.synthetic.main.fragment_story.*
 
 class StoryFragment : Fragment() {
 
@@ -30,7 +26,7 @@ class StoryFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val fStore = FirebaseFirestore.getInstance()
-    private val reference: Query = fStore.collection("stories").whereEqualTo("category", "Kisah")
+    private val reference: Query = fStore.collection("posts").whereEqualTo("category", "Kisah")
     private var adapter: StoryAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -47,15 +43,15 @@ class StoryFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        btnCreate.setOnClickListener{
-            startActivity(Intent(requireContext(), StoryCreateActivity::class.java))
+        binding.btnCreate.setOnClickListener{
+            startActivity(Intent(requireContext(), PostCreateActivity::class.java))
         }
         adapter?.startListening()
     }
 
-    private fun getStory(): FirestoreRecyclerOptions<Story> {
-        return FirestoreRecyclerOptions.Builder<Story>()
-            .setQuery(reference, Story::class.java)
+    private fun getStory(): FirestoreRecyclerOptions<Post> {
+        return FirestoreRecyclerOptions.Builder<Post>()
+            .setQuery(reference, Post::class.java)
             .build();
     }
 

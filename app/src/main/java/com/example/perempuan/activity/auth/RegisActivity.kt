@@ -9,10 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.navigation.findNavController
 import com.example.perempuan.R
 import com.example.perempuan.activity.MainActivity
-import com.example.perempuan.databinding.ActivityRegisBinding
 import com.example.perempuan.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

@@ -26,13 +26,13 @@
             android:name=".activity.profile.ProfileEditActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.story.StoryShowActivity"
+            android:name=".activity.post.PostShowActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.story.StoryEditActivity"
+            android:name=".activity.post.PostEditActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.story.StoryCreateActivity"
+            android:name=".activity.post.PostCreateActivity"
             android:exported="true" />
         <activity
             android:name=".activity.LandingActivity"
