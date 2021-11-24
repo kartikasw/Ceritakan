@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.perempuan.activity.LandingActivity
+import com.example.perempuan.activity.profile.ProfileEditActivity
 import com.example.perempuan.adapter.ProfileAdapter
 import com.example.perempuan.databinding.FragmentProfileBinding
 import com.example.perempuan.model.Post
@@ -27,6 +28,8 @@ class ProfileFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    lateinit var username: String
 
     private val fAuth = FirebaseAuth.getInstance()
     val user = fAuth.currentUser
@@ -48,10 +51,17 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
         fStore.collection("users").document(user!!.uid).get().addOnSuccessListener {
             binding.tvUsername.setText(it.getString("username"))
             binding.tvEmail.setText(it.getString("email"))
         }
+
+        binding.btnEdit.setOnClickListener{
+            var intent = Intent(getActivity(), ProfileEditActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnLogout.setOnClickListener{
             val dialog = AlertDialog.Builder(requireContext())
             dialog.setTitle("Log out")

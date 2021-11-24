@@ -19,7 +19,7 @@ class MotivationAdapter(options: FirestoreRecyclerOptions<Post>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_story, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_content, parent, false)
         return MyViewHolder(view)
     }
 

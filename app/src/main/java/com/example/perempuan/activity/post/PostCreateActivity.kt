@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.perempuan.databinding.ActivityPostCreateBinding
 import com.example.perempuan.model.Post
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class PostCreateActivity : AppCompatActivity() {
@@ -33,7 +34,7 @@ class PostCreateActivity : AppCompatActivity() {
                 val ref = fStore.collection("posts").document()
 
                 if (title.isEmpty()) {
-                    etTitle.setError("Judul tidak boleh kosong")
+                    etTitle.setError("Judul harus diisi")
                     return@setOnClickListener
                 }
                 if (title.length > 20) {
@@ -41,7 +42,7 @@ class PostCreateActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
                 if (content.isEmpty()) {
-                    etContent.setError("Isi kontent tidak boleh kosong")
+                    etContent.setError("Isi konten harus diisi")
                     return@setOnClickListener
                 }
 

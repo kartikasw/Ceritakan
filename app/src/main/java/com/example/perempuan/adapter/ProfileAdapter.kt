@@ -47,7 +47,7 @@ class ProfileAdapter(options: FirestoreRecyclerOptions<Post>):
 
         holder.edit.setOnClickListener{
             val intent = Intent(holder.edit.context, PostEditActivity::class.java)
-            intent.putExtra("POST_OBJECT", model)
+            intent.putExtra("UID_STRING", model.uid)
             holder.edit.context.startActivity(intent)
         }
 

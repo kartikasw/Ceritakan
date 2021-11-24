@@ -50,36 +50,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp" />
 
-                <TextView
-                    android:id="@+id/tvEmail"
-                    style="@style/text_normal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:text="Email" />
-
-                <EditText
-                    android:id="@+id/etEmail"
-                    style="@style/form_white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp" />
-
-                <TextView
-                    android:id="@+id/tvPassword"
-                    style="@style/text_normal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:text="Password" />
-
-                <TextView
-                    android:id="@+id/etPassword"
-                    style="@style/form_white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp" />
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSave"
                     style="@style/button"
