@@ -49,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Login berhasil.", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this, "Login gagal", Toast.LENGTH_SHORT).show()
                 }

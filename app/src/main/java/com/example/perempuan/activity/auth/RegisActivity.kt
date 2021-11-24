@@ -66,6 +66,7 @@ class RegisActivity : AppCompatActivity() {
                         val user = fAuth.currentUser
                         saveUserData(user!!.uid, username, email)
                         startActivity(Intent(this, MainActivity::class.java))
+                        finish()
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.d("cek", "${task.exception}")
