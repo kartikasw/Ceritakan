@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_tips"
-        android:name="com.example.perempuan.ui.tips.TipsFragment"
+        android:name="com.example.perempuan.ui.add.AddFragment"
         android:label="@string/title_tips"
-        tools:layout="@layout/fragment_tips" />
+        tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.perempuan.ui.profile.ProfileFragment"
