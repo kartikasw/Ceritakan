@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/layout/activity_story_create.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/layout/activity_story_edit.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/layout/activity_story_show.xml" value="0.3614583333333333" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.307518115942029" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/fragment_motivation.xml" value="0.2015625" />

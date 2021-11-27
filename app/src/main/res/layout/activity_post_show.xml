@@ -93,14 +93,21 @@
                     android:layout_marginTop="23dp"
                     android:text="Deskripsi" />
 
-                <TextView
-                    android:id="@+id/tvContent"
-                    style="@style/form_yellow"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="163dp"
-                    android:layout_marginTop="23dp"
-                    android:gravity="left"
-                    android:textAlignment="gravity"/>
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvContent"
+                        style="@style/form_yellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="163dp"
+                        android:layout_marginTop="23dp"
+                        android:gravity="left"
+                        android:textAlignment="gravity"/>
+
+                </ScrollView>
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnBack"

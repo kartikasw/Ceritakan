@@ -26,7 +26,7 @@ class ProfileEditActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnSave).setOnClickListener{
-            var username = editUsername.text.toString()
+            var username = editUsername.text.toString().trim()
 
             if (username.isEmpty()) {
                 editUsername.setError("Username harus diisi")

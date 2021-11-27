@@ -35,7 +35,7 @@ class RegisActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnRegis).setOnClickListener{
 
-            val username = regisUsername.text.toString()
+            val username = regisUsername.text.toString().trim()
             val email = regisEmail.text.toString()
             val password = regisPassword.text.toString()
 

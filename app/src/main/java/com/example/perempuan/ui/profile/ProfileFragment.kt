@@ -69,6 +69,7 @@ class ProfileFragment : Fragment() {
             dialog.setPositiveButton("Ya") { dialog: DialogInterface?, which: Int ->
                 fAuth.signOut()
                 startActivity(Intent(requireContext(), LandingActivity::class.java))
+                activity?.finish()
             }
             dialog.setNegativeButton("Tidak") { dialog: DialogInterface?, which: Int -> }
             dialog.show()

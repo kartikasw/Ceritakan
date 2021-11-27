@@ -37,12 +37,20 @@ class PostCreateActivity : AppCompatActivity() {
                     etTitle.setError("Judul harus diisi")
                     return@setOnClickListener
                 }
-                if (title.length > 20) {
+                if (category == "Kisah" && title.length > 20) {
                     etTitle.setError("Judul tidak boleh lebih dari 20 karakter")
+                    return@setOnClickListener
+                }
+                if (category == "Motivasi" && title.length > 30) {
+                    etTitle.setError("Judul tidak boleh lebih dari 30 karakter")
                     return@setOnClickListener
                 }
                 if (content.isEmpty()) {
                     etContent.setError("Isi konten harus diisi")
+                    return@setOnClickListener
+                }
+                if (category == "Motivasi" && content.length > 200) {
+                    etContent.setError("Isi konten tidak boleh lebih dari 190 karakter")
                     return@setOnClickListener
                 }
 
