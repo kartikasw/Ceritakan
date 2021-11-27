@@ -13,11 +13,13 @@
         android:id="@+id/rvMotivation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingHorizontal="30dp"
-        tools:listitem="@layout/item_content"/>
+        tools:listitem="@layout/item_content" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnCreate"
