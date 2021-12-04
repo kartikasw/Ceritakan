@@ -25,8 +25,6 @@ class MotivationFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private val fStore = FirebaseFirestore.getInstance()
-    private val reference: Query = fStore.collection("posts").whereEqualTo("category", "Motivasi")
     private var adapter: MotivationAdapter? = null
 
     override fun onCreateView(
@@ -39,7 +37,7 @@ class MotivationFragment : Fragment() {
 
         _binding = FragmentMotivationBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        adapter = MotivationAdapter(getMotivation())
+        adapter = MotivationAdapter(motivationViewModel.getMotivation())
         binding.rvMotivation.layoutManager = LinearLayoutManager(root.context)
         binding.rvMotivation.adapter = adapter
         return root
@@ -48,12 +46,6 @@ class MotivationFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         adapter?.startListening()
-    }
-
-    private fun getMotivation(): FirestoreRecyclerOptions<Post> {
-        return FirestoreRecyclerOptions.Builder<Post>()
-            .setQuery(reference, Post::class.java)
-            .build();
     }
 
     override fun onDestroyView() {

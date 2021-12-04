@@ -5,35 +5,34 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import com.example.perempuan.R
 import com.example.perempuan.activity.MainActivity
+import com.example.perempuan.databinding.ActivityRegisBinding
 import com.example.perempuan.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityRegisBinding
     private val fAuth = FirebaseAuth.getInstance()
     private val fStore = FirebaseFirestore.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_regis)
+        binding = ActivityRegisBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        findViewById<TextView>(R.id.tvLogin).setOnClickListener {
+        binding.tvLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        val regisUsername = findViewById<EditText>(R.id.etUsername)
-        val regisEmail = findViewById<EditText>(R.id.etEmail)
-        val regisPassword = findViewById<EditText>(R.id.etPassword)
+        val regisUsername = binding.etUsername
+        val regisEmail = binding.etEmail
+        val regisPassword = binding.etPassword
 
-        findViewById<Button>(R.id.btnRegis).setOnClickListener{
+        binding.btnRegis.setOnClickListener{
 
             val username = regisUsername.text.toString().trim()
             val email = regisEmail.text.toString()

@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.perempuan.databinding.ActivityPostCreateBinding
 import com.example.perempuan.model.Post
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class PostCreateActivity : AppCompatActivity() {

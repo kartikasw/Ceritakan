@@ -12,7 +12,6 @@ import com.example.perempuan.databinding.FragmentAddBinding
 
 class AddFragment : Fragment() {
 
-    private lateinit var addViewModel: AddViewModel
     private var _binding: FragmentAddBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,9 +23,6 @@ class AddFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addViewModel =
-            ViewModelProvider(this).get(AddViewModel::class.java)
-
         _binding = FragmentAddBinding.inflate(inflater, container, false)
         val root: View = binding.root
 

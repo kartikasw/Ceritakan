@@ -2,28 +2,26 @@ package com.example.perempuan.activity.post
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.TextView
 import android.widget.Toast
-import com.example.perempuan.R
-import com.example.perempuan.model.Post
+import com.example.perempuan.databinding.ActivityPostEditBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
 class PostEditActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityPostEditBinding
     private val fStore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_post_edit)
+        binding = ActivityPostEditBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val postUid = intent.getStringExtra("UID_STRING").toString()
 
-        var editStatus = findViewById<TextView>(R.id.tvStatus)
-        var editCategory = findViewById<TextView>(R.id.tvCategory)
-        var editTitle = findViewById<TextView>(R.id.etTitle)
-        var editContent = findViewById<TextView>(R.id.etContent)
+        var editStatus = binding.tvStatus
+        var editCategory = binding.tvCategory
+        var editTitle = binding.etTitle
+        var editContent = binding.etContent
 
         fStore.collection("posts").document(postUid).get().addOnSuccessListener {
             editStatus.setText(it.getString("status"))
@@ -32,7 +30,7 @@ class PostEditActivity : AppCompatActivity() {
             editContent.setText(it.getString("content"))
         }
 
-        findViewById<Button>(R.id.btnSave).setOnClickListener{
+        binding.btnSave.setOnClickListener{
             var title = editTitle.text.toString()
             var content = editContent.text.toString()
 

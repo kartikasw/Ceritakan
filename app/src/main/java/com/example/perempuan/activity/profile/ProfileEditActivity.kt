@@ -2,22 +2,24 @@ package com.example.perempuan.activity.profile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.perempuan.R
+import com.example.perempuan.databinding.ActivityProfileEditBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ProfileEditActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityProfileEditBinding
     private val fAuth = FirebaseAuth.getInstance()
     val user = fAuth.currentUser
     private val fStore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_edit)
+        binding = ActivityProfileEditBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         var editUsername = findViewById<EditText>(R.id.etUsername)
 
@@ -25,7 +27,7 @@ class ProfileEditActivity : AppCompatActivity() {
             editUsername.setText(it.getString("username"))
         }
 
-        findViewById<Button>(R.id.btnSave).setOnClickListener{
+        binding.btnSave.setOnClickListener{
             var username = editUsername.text.toString().trim()
 
             if (username.isEmpty()) {
