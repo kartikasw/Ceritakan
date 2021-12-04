@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.perempuan.activity.LandingActivity
+import com.example.perempuan.activity.SettingsActivity
 import com.example.perempuan.activity.profile.ProfileEditActivity
 import com.example.perempuan.adapter.ProfileAdapter
 import com.example.perempuan.databinding.FragmentProfileBinding
@@ -59,6 +60,11 @@ class ProfileFragment : Fragment() {
 
         binding.btnEdit.setOnClickListener{
             var intent = Intent(getActivity(), ProfileEditActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnSettings.setOnClickListener{
+            var intent = Intent(getActivity(), SettingsActivity::class.java)
             startActivity(intent)
         }
 

@@ -82,6 +82,14 @@
                 android:text="Edit Profil" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSettings"
+                style="@style/button"
+                android:layout_width="282dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Pengaturan" />
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogout"
                 style="@style/button"
                 android:layout_width="282dp"
