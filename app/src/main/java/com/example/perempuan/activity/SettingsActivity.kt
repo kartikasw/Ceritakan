@@ -8,6 +8,7 @@ import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.perempuan.R
 import com.example.perempuan.databinding.ActivitySettingsBinding
+import io.reactivex.Observable
 
 class SettingsActivity : AppCompatActivity() {
 

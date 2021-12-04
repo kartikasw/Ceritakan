@@ -36,11 +36,15 @@ class AddFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         binding.buttonKisah.setOnClickListener{
-            startActivity(Intent(requireContext(), PostCreateActivity::class.java))
+            val intent = Intent(requireContext(), PostCreateActivity::class.java)
+            intent.putExtra("CATEGORY_STRING", "kisah")
+            startActivity(intent)
         }
 
         binding.buttonMot.setOnClickListener{
-            startActivity(Intent(requireContext(), PostCreateActivity::class.java))
+            val intent = Intent(requireContext(), PostCreateActivity::class.java)
+            intent.putExtra("CATEGORY_STRING", "motivasi")
+            startActivity(intent)
         }
     }
 

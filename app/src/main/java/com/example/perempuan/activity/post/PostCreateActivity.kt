@@ -22,7 +22,17 @@ class PostCreateActivity : AppCompatActivity() {
         binding = ActivityPostCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val cat = intent.getStringExtra("CATEGORY_STRING").toString()
         postCreateViewModel = ViewModelProvider(this).get(PostCreateViewModel ::class.java)
+
+        when(cat) {
+            "kisah" -> {
+                binding.spCategory.setSelection(0)
+            }
+            "motivasi" -> {
+                binding.spCategory.setSelection(1)
+            }
+        }
 
         binding.apply {
             btnCreate.setOnClickListener{
