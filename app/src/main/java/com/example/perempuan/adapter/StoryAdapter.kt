@@ -47,9 +47,6 @@ class StoryAdapter(options: FirestoreRecyclerOptions<Post>):
         holder.title.text = model.title
         holder.content.text = model.content
         holder.likes.text = model.likeCount.toString()
-
-
-
         holder.btnLike.setOnClickListener{
 
         }

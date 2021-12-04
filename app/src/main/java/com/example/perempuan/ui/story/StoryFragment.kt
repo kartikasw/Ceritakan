@@ -25,8 +25,6 @@ class StoryFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private val fStore = FirebaseFirestore.getInstance()
-    private val reference: Query = fStore.collection("posts").whereEqualTo("category", "Kisah")
     private var adapter: StoryAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -35,7 +33,7 @@ class StoryFragment : Fragment() {
 
         _binding = FragmentStoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        adapter = StoryAdapter(getStory())
+        adapter = StoryAdapter(storyViewModel.getStory())
         binding.rvStory.layoutManager = LinearLayoutManager(root.context)
         binding.rvStory.adapter = adapter
         return root
@@ -44,12 +42,6 @@ class StoryFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         adapter?.startListening()
-    }
-
-    private fun getStory(): FirestoreRecyclerOptions<Post> {
-        return FirestoreRecyclerOptions.Builder<Post>()
-            .setQuery(reference, Post::class.java)
-            .build();
     }
 
     override fun onDestroyView() {

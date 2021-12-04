@@ -35,7 +35,6 @@ class ProfileFragment : Fragment() {
     private val fAuth = FirebaseAuth.getInstance()
     val user = fAuth.currentUser
     private val fStore = FirebaseFirestore.getInstance()
-    private val reference: Query = fStore.collection("posts").whereEqualTo("user_uid", user!!.uid)
     private var adapter: ProfileAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -43,7 +42,7 @@ class ProfileFragment : Fragment() {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        adapter = ProfileAdapter(getPost())
+        adapter = ProfileAdapter(profileViewModel.getPost())
         binding.rvPost.layoutManager = LinearLayoutManager(root.context)
         binding.rvPost.adapter = adapter
         return root
@@ -72,21 +71,15 @@ class ProfileFragment : Fragment() {
             val dialog = AlertDialog.Builder(requireContext())
             dialog.setTitle("Log out")
             dialog.setMessage("Apakah Anda yakin?")
-            dialog.setPositiveButton("Ya") { dialog: DialogInterface?, which: Int ->
+            dialog.setPositiveButton("Ya") { _, _ ->
                 fAuth.signOut()
                 startActivity(Intent(requireContext(), LandingActivity::class.java))
                 activity?.finish()
             }
-            dialog.setNegativeButton("Tidak") { dialog: DialogInterface?, which: Int -> }
+            dialog.setNegativeButton("Tidak") { _, _ -> }
             dialog.show()
         }
         adapter?.startListening()
-    }
-
-    private fun getPost(): FirestoreRecyclerOptions<Post> {
-        return FirestoreRecyclerOptions.Builder<Post>()
-            .setQuery(reference, Post::class.java)
-            .build();
     }
 
     override fun onDestroyView() {
