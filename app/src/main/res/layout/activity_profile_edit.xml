@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.profile.ProfileEditActivity"
-    android:background="#7DB9FF">
+    style="@style/lightBackground">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,10 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="49dp"
-                android:fontFamily="@font/montserrat"
                 android:text="EDIT PROFIL"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/text_normal"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7DB9FF"
+    style="@style/lightBackground"
     tools:context=".activity.LandingActivity">
 
     <ScrollView
@@ -23,13 +23,12 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
                 android:lineHeight="26.23dp"
                 android:text="SETIAP PEREMPUAN \nPUNYA HAK \nUNTUK DIHARGAI"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
+                style="@style/text_normal"
                 android:textSize="25sp"
+                android:textFontWeight="700"
                 android:textStyle="bold" />
 
             <ImageView
@@ -64,21 +63,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/montserrat"
+                style="@style/text_normal"
+                android:textSize="20sp"
                 android:text="CERITAKAN"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_semibold"
                 android:text="by Kelompok 7"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
+                style="@style/text_normal"
+                android:textSize="15sp"/>
         </LinearLayout>
     </ScrollView>
 

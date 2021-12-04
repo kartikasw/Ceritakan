@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.perempuan.R
 import com.example.perempuan.activity.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,9 +15,18 @@ import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
 
+    private lateinit var saveData: SaveData
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        saveData = SaveData(this)
+        if(saveData.loadDarkModeState()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
 
         val user = FirebaseAuth.getInstance().currentUser?.uid
         //Log.d("xyz" , "${user}")

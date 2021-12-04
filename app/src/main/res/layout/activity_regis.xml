@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.auth.RegisActivity"
-    android:background="#7DB9FF">
+    style="@style/lightBackground">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,20 +22,19 @@
                 android:id="@+id/titlelogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
                 android:text="REGISTRASI"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/text_normal"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <LinearLayout
+                style="@style/form_yellow"
                 android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:paddingHorizontal="20dp"
-                android:background="@drawable/background_yellow"
                 android:orientation="vertical">
 
                 <TextView
@@ -107,11 +106,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:layout_marginBottom="30dp"
-                    android:fontFamily="@font/muli_semibold"
                     android:text="Sudah memiliki akun?"
                     android:layout_marginEnd="5dp"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    style="@style/text_normal"
                     android:textSize="13sp" />
 
                 <TextView
@@ -120,11 +118,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:layout_marginBottom="30dp"
-                    android:fontFamily="@font/muli_semibold"
                     android:text="Login di sini."
                     android:textStyle="bold"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    style="@style/text_normal"
                     android:textSize="13sp" />
 
             </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.perempuan.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import java.security.Timestamp
 
 @Parcelize
 data class Post(

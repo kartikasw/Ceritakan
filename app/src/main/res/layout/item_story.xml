@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     android:layout_marginBottom="20dp"
     android:layout_marginHorizontal="20dp"
-    app:cardBackgroundColor="#7DB9FF"
+    style="@style/lightCard"
     >
 
     <LinearLayout
@@ -35,13 +35,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text="Anonymous" />
-
-            <TextView
-                android:id="@+id/tvDate"
-                style="@style/text_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="Tanggal" />
 
             <TextView
                 android:id="@+id/tvTitle"

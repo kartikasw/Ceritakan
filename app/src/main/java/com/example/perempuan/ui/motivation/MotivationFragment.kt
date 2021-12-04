@@ -47,9 +47,6 @@ class MotivationFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        binding.btnCreate.setOnClickListener{
-            startActivity(Intent(requireContext(), PostCreateActivity::class.java))
-        }
         adapter?.startListening()
     }
 

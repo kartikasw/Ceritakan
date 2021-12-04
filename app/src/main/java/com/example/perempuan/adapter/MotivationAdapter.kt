@@ -9,13 +9,22 @@ import com.example.perempuan.R
 import com.example.perempuan.model.Post
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MotivationAdapter(options: FirestoreRecyclerOptions<Post>):
+
+
     FirestoreRecyclerAdapter<Post, MotivationAdapter.MyViewHolder>(options) {
+
+    private val fStore = FirebaseFirestore.getInstance()
+    private val reference: CollectionReference = fStore.collection("users")
+    private lateinit var modelUsername: String
 
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var title = itemView.findViewById<TextView>(R.id.tvTitle)
         var content = itemView.findViewById<TextView>(R.id.tvContent)
+        var username = itemView.findViewById<TextView>(R.id.tvUser)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -24,6 +33,17 @@ class MotivationAdapter(options: FirestoreRecyclerOptions<Post>):
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Post) {
+        model.user_uid?.let {
+            reference.document(it).get().addOnSuccessListener {
+                modelUsername = it.getString("username").toString()
+                if(model.status == "Rahasia") {
+                    holder.username.text = "- Anonymous -"
+                } else {
+                    holder.username.text = "- $modelUsername -"
+                }
+            }
+        }
+
         holder.title.text = model.title
         holder.content.text = model.content
     }

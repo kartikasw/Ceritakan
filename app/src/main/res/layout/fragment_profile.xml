@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment"
     android:layout_marginBottom="60dp"
-    android:background="#7DB9FF">
+    style="@style/lightBackground">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,20 +22,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="49dp"
-                android:fontFamily="@font/montserrat"
                 android:text="PROFIL"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/text_normal"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <LinearLayout
+                style="@style/form_yellow"
                 android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:paddingHorizontal="20dp"
-                android:background="@drawable/background_yellow"
                 android:orientation="vertical">
 
                 <TextView
