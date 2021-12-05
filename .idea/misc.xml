@@ -3,20 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/activity_landing.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/activity_login.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/fragment_add.xml" value="0.264" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/fragment_motivation.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/fragment_profile.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/item_content.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/layout/item_story.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/WINDOWS 10/AndroidStudioProjects/Ceritakan/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/background_yellow.xml" value="0.21770833333333334" />
-        <entry key="app/src/main/res/drawable/button_black.xml" value="0.21770833333333334" />
-        <entry key="app/src/main/res/drawable/button_yellow.xml" value="0.21770833333333334" />
-        <entry key="app/src/main/res/drawable/content_brown.xml" value="0.3776041666666667" />
-        <entry key="app/src/main/res/drawable/content_grey.xml" value="0.3776041666666667" />
         <entry key="app/src/main/res/drawable/content_white.xml" value="0.3776041666666667" />
         <entry key="app/src/main/res/drawable/content_yellow.xml" value="0.3776041666666667" />
-        <entry key="app/src/main/res/drawable/form_brown.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/drawable/form_white.xml" value="0.3776041666666667" />
         <entry key="app/src/main/res/drawable/form_yellow.xml" value="0.3776041666666667" />
         <entry key="app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.3776041666666667" />
@@ -32,7 +29,6 @@
         <entry key="app/src/main/res/layout/activity_profile_edit.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/layout/activity_read_more.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_regis.xml" value="0.3614583333333333" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.33061594202898553" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/activity_story_create.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/layout/activity_story_edit.xml" value="0.3614583333333333" />
@@ -42,7 +38,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/fragment_motivation.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.2015625" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2663454920853407" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_story.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_tips.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/item_content.xml" value="0.2015625" />

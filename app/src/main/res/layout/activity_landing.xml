@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="by Kelompok 7"
+                android:text="by Kelompok 8"
                 android:textAlignment="center"
                 style="@style/text_normal"
                 android:textSize="15sp"/>
