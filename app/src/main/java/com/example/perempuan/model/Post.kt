@@ -12,5 +12,4 @@ data class Post(
     val category: String? = "",
     var title: String? = "",
     var content: String? = "",
-    var likeCount: Int? = 0
     ): Parcelable {}

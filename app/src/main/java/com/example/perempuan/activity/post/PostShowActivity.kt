@@ -17,9 +17,9 @@ class PostShowActivity : AppCompatActivity() {
         val post = intent.getParcelableExtra<Post>("POST_OBJECT")
         //Log.d("check", "isi: ${post}")
         binding.tvStatus.setText(post!!.status)
-        binding.tvCategory.setText(post!!.category)
-        binding.tvTitle.setText(post!!.title)
-        binding.tvContent.setText(post!!.content)
+        binding.tvCategory.setText(post.category)
+        binding.tvTitle.setText(post.title)
+        binding.tvContent.setText(post.content)
 
         binding.btnBack.setOnClickListener{
             onBackPressed()

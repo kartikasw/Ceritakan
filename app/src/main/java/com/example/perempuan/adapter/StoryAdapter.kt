@@ -24,8 +24,6 @@ class StoryAdapter(options: FirestoreRecyclerOptions<Post>):
         var username = itemView.findViewById<TextView>(R.id.tvUsername)
         var title = itemView.findViewById<TextView>(R.id.tvTitle)
         var content = itemView.findViewById<TextView>(R.id.tvContent)
-        var likes = itemView.findViewById<TextView>(R.id.likeCount)
-        var btnLike = itemView.findViewById<ImageButton>(R.id.btnLike)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -46,10 +44,6 @@ class StoryAdapter(options: FirestoreRecyclerOptions<Post>):
         }
         holder.title.text = model.title
         holder.content.text = model.content
-        holder.likes.text = model.likeCount.toString()
-        holder.btnLike.setOnClickListener{
-
-        }
     }
 
 }

@@ -80,7 +80,7 @@ class RegisActivity : AppCompatActivity() {
         val data = fStore.collection("users").document(uid)
         val userData = User(uid, username, email)
 
-        data.set(userData).addOnCompleteListener { task ->
+        data.set(userData).addOnCompleteListener { _ ->
             Toast.makeText(baseContext, "Daftar berhasil", Toast.LENGTH_SHORT).show()
         } .addOnFailureListener { exception ->
             //Log.d("cek", "${exception}")

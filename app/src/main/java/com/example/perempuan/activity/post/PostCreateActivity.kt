@@ -63,7 +63,7 @@ class PostCreateActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
-                var post = user_uid?.let { it -> Post(ref.getId(), it, status, category, title, content,  0) }
+                var post = user_uid?.let { it -> Post(ref.getId(), it, status, category, title, content) }
                 if (post != null) {
                     postCreateViewModel.createPost(ref.getId(), post)
                     if(postCreateViewModel.getState()){
